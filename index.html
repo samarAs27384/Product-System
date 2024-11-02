@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/stayl.css">
+</head>
+<body>
+    
+<div class=" w-50 mx-auto py-3">
+    <h2 class=" mb-5"> Product Mangament System </h2>
+    <div class=" form-grup mb-3">
+        <label for="ProductName">Product Name</label>
+        <input type="text"  onkeyup="validateProductName()"  id="ProductName" class="form-control">
+        <p class="text-danger d-none" id="name-validation">please check your input (suppose to start with capital )</p>
+
+    </div>
+    <div class=" form-grup mb-3">
+        <label for="ProductPrice">Product Price</label>
+        <input type="number" id="ProductPrice" onkeyup=" validateProductPrice()"   class="form-control">
+        <p class="text-danger d-none" id="Price-validation">please check your input (price validation ..1000 to 10000 )</p>
+
+    </div>
+    <div class=" form-grup mb-3">
+        <label for="ProductCategory">Product Category</label>
+        <input type="text" id="ProductCategory" onkeyup=" validateProductCategory()"   class="form-control">
+        <p class="text-danger d-none" id="Category-validation">please check your input (category is Mobile | TV | Laptop )</p>
+
+
+    </div>
+    <div class=" form-grup mb-3">
+        <label for="ProductDescrebtion">Product Descrebtion</label>
+        <textarea type="text" id="ProductDescrebtion" class="form-control"></textarea>
+
+    </div>
+    <button onclick=" addProduct()"  id="mainBtn" class=" btn btn-outline-info"> Add Product</button>
+    <button onclick=" updateProduct()"  id="Update" class=" btn btn-outline-warning d-none"> Update Product</button>
+
+</div>
+
+<div class=" w-50 mx-auto py-3"> 
+    <label for="ProductSearch">ProductSearch</label>
+    <input oninput="searchProduct(this.value)"   type="text" name="" id="ProductSearch" class="form-control">
+
+</div>
+
+<div class="w-50 mx-auto text-center">
+    <table class="table">
+        <thead>
+            <th> Index</th>
+            <th> Name</th>
+            <th> Price</th>
+            <th> Category</th>
+            <th> Descrebtion</th>
+            <th>Updet</th>
+            <th>Delet</th>
+        </thead>
+        <tbody id="tableBode">
+           
+           
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
